@@ -14,10 +14,10 @@ You can find the latest build details on the [Docker Hub](https://hub.docker.com
 # What works
 
 - [x] Nginx 1.8.1
-- [x] PHP 7.0
-- [x] SQLite
-- [x] MySQL 5.7
-- [x] Redis
+- [x] PHP 8.1
+- [ ] SQLite
+- [x] MySQL 8.0
+- [ ] Redis
 - [x] NodeJS
 - [ ] PostgreSQL
 - [x] Beanstalkd
