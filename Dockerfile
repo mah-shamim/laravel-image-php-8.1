@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 MAINTAINER Hafijul Islam <hafijul233@gmail.com>
 
 # set some environment variables
@@ -15,8 +15,8 @@ RUN apt-get update && \
 RUN apt-get update && apt-get install --assume-yes --no-install-recommends apt-utils
 
 RUN apt-get install --assume-yes software-properties-common curl \
-    build-essential libmcrypt4 libpcre3-dev python-pip wget zip \
-    unattended-upgrades whois vim libnotify-bin locales \
+    build-essential dos2unix gcc git libmcrypt4 libpcre3-dev rc2c python-pip wget zip \
+    unattended-upgrades whois vim debconf-utils libnotify-bin locales \
     cron libpng-dev unzip
 
 # add some repositories
@@ -86,6 +86,8 @@ RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
     printf "\nPATH=\"~/.composer/vendor/bin:\$PATH\"\n" | tee -a ~/.bashrc
     
+#install laravel installer
+RUN composer global require "laravel/installer"
 
 # install supervisor
 RUN apt-get install --assume-yes supervisor && \
