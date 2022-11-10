@@ -1,9 +1,9 @@
 FROM ubuntu:22.04
-MAINTAINER Derek Bourgeois <derek@ibourgeois.com>
+MAINTAINER Hafijul Islam <hafijul233@gmail.com>
 
 # set some environment variables
 ENV APP_NAME app
-ENV APP_EMAIL app@laraedit.com
+ENV APP_EMAIL app@example.com
 ENV APP_DOMAIN app.dev
 ENV DEBIAN_FRONTEND noninteractive
 
